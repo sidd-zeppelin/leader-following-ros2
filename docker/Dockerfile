@@ -35,6 +35,11 @@ RUN apt-get update && apt-get install -y \
     python3-argcomplete \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y \
+    gazebo \
+    ros-humble-gazebo-ros-pkgs \
+    && rm -rf /var/lib/apt/lists/*
+
 # ---- Source ROS automatically ----
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 

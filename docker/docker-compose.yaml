@@ -4,5 +4,10 @@ services:
     container_name: leader_follower_dev
     volumes:
       - ../ros2_ws:/ros2_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
     stdin_open: true
     tty: true
+    network_mode: host

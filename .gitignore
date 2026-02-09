@@ -1,6 +1,15 @@
+# ROS 2 build artifacts
 build/
 install/
 log/
+
+# Python cache
 *.pyc
+__pycache__/
+
+# Editors
 .vscode/
 .idea/
+
+# Docker
+*.env

@@ -40,6 +40,22 @@ RUN apt-get update && apt-get install -y \
     ros-humble-gazebo-ros-pkgs \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y \
+    ros-humble-turtlebot3 \
+    ros-humble-turtlebot3-msgs \
+    ros-humble-turtlebot3-simulations \
+    ros-humble-turtlebot3-gazebo \
+    ros-humble-navigation2 \
+    ros-humble-nav2-bringup \
+    ros-humble-slam-toolbox \
+    ros-humble-cv-bridge \
+    ros-humble-image-transport \
+    ros-humble-camera-calibration-parsers \
+    ros-humble-camera-info-manager \
+    && rm -rf /var/lib/apt/lists/*
+ENV TURTLEBOT3_MODEL=burger
+
+
 # ---- Source ROS automatically ----
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 

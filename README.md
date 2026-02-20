@@ -12,7 +12,7 @@ xhost +local:root
 
 Once you build the image run this command to build the container:
 
-docker run -it     --name ros2-humble-container     --privileged     --net=host     --ipc=host     --gpus=all     --env DISPLAY=$DISPLAY     --env NVIDIA_VISIBLE_DEVICES=all     --env NVIDIA_DRIVER_CAPABILITIES=all     --env QT_X11_NO_MITSHM=1     --env LD_LIBRARY_PATH=/usr/lib/wsl/lib     --env MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA     --volume /tmp/.X11-unix:/tmp/.X11-unix     --volume /mnt/wslg:/mnt/wslg     --volume /usr/lib/wsl:/usr/lib/wsl     --volume /dev/dxg:/dev/dxg     --volume ~/leader-following-ros2/leader_follower_ws:/root/leader_follower_ws     --device /dev/dxg     --user root     ros2-humble
+docker run -it     --name ros2-humble-container     --privileged     --net=host     --ipc=host     --gpus=all     --env DISPLAY=$DISPLAY     --env NVIDIA_VISIBLE_DEVICES=all     --env NVIDIA_DRIVER_CAPABILITIES=all     --env QT_X11_NO_MITSHM=1     --env LD_LIBRARY_PATH=/usr/lib/wsl/lib     --env MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA     --volume /tmp/.X11-unix:/tmp/.X11-unix     --volume /mnt/wslg:/mnt/wslg     --volume /usr/lib/wsl:/usr/lib/wsl     --volume /dev/dxg:/dev/dxg     --volume ~/leader-following-ros2/leader_follower_ws:/root/leader_follower_ws     --device /dev/dxg     --user $(id -u):$(id -g)     ros2-humble
 
 This will open into the container
 The workspace is located in root

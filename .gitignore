@@ -13,3 +13,8 @@ __pycache__/
 
 # Docker
 *.env
+leader_follower_ws/build/
+leader_follower_ws/install/
+leader_follower_ws/log/
+__pycache__/
+*.pyc

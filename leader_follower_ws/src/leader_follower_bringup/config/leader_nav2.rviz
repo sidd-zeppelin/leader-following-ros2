@@ -1,0 +1,62 @@
+Panels:
+  - Class: rviz_common/Displays
+  - Class: rviz_common/Tool Properties
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Topic:
+        Value: /TB3_1/map
+      Update Topic:
+        Value: /TB3_1/map_updates
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Topic:
+        Value: /TB3_1/scan
+      Size (m): 0.03
+    - Class: rviz_default_plugins/LaserScan
+      Name: FollowerScan
+      Topic:
+        Value: /TB3_2/scan
+      Size (m): 0.03
+      Color: 0; 255; 0
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Show Names: true
+    - Class: rviz_default_plugins/Map
+      Name: GlobalCostmap
+      Topic:
+        Value: /TB3_1/global_costmap/costmap
+      Color Scheme: costmap
+      Alpha: 0.5
+    - Class: rviz_default_plugins/Map
+      Name: LocalCostmap
+      Topic:
+        Value: /TB3_1/local_costmap/costmap
+      Color Scheme: costmap
+      Alpha: 0.5
+    - Class: rviz_default_plugins/Path
+      Name: Plan
+      Topic:
+        Value: /TB3_1/plan
+    - Class: rviz_default_plugins/RobotModel
+      Name: LeaderModel
+      Robot Description Topic:
+        Value: /TB3_1/robot_description
+    - Class: rviz_default_plugins/RobotModel
+      Name: FollowerModel
+      Robot Description Topic:
+        Value: /TB3_2/robot_description
+  Global Options:
+    Fixed Frame: map
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /TB3_1/initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /TB3_1/goal_pose
+  Window Geometry:
+    Width: 1200
+    Height: 800
